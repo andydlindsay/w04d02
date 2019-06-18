@@ -8,5 +8,17 @@
 </head>
 <body>
     <h1>All of our Villains!</h1>
+    <a href="/villains/new">Add New Villain</a>
+    <% if (villains) { %>
+        <ul>
+            <% for (const villain of villains) { %>
+                <a href="/villains/<%= villain.id %>">
+                    <li>
+                        <h2><%= villain.alias %> from <%= villain.movie %> (<%= villain.id %>)</h2>
+                    </li>
+                </a>
+            <% } %>
+        </ul>
+    <% } %>
 </body>
 </html>
