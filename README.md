@@ -12,6 +12,7 @@
 * Use `\i` command to "include" the `villains.sql` file from the `sql` directory
 * Create a new user `villains_user` and give them appropriate permissions and a password
 ```sql
+CREATE USER villains_user;
 GRANT ALL PRIVILEGES ON DATABASE villains TO villains_user;
 GRANT ALL PRIVILEGES ON TABLE villains TO villains_user;
 ALTER USER villains_user WITH ENCRYPTED PASSWORD 'password';
